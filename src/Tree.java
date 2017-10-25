@@ -5,4 +5,9 @@
 public class Tree {
     // Field Declarations
     private BiNode rootNode;
+
+    // Constructor
+    public Tree(BiNode root) {
+        rootNode = root;
+    }
 }
