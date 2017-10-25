@@ -11,6 +11,15 @@ public class Tree {
         rootNode = root;
     }
 
+    // Methods
+    private void postorderTraversal(BiNode node) {
+
+    }
+
+    private void prostorderTraversal() {
+
+    }
+
     public static void main(String[] args) {
         // Testing Tree creation
         BiNode three = new BiNode("3");
