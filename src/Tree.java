@@ -3,8 +3,19 @@ import java.util.Stack;
 import java.util.StringTokenizer;
 
 /**
- * ADLab02
- * Created by IF on 25.10.17.
+ * <pre>
+ * ADL Lab 02
+ * Ian Fennie: 2304236
+ * 25.10.17
+ *
+ * Project file compiled with Javac using JetBrains IntelliJ IDEA 2017.2.5
+ *
+ * Each lab partner has independently completed solutions for both Problems 3 and 4.
+ *
+ * </pre>
+ *
+ * An implementation of a binary tree structure with several constructors and methods
+ * for different traversal algorithms.
  */
 public class Tree {
     // Field Declarations
