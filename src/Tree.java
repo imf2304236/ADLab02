@@ -31,7 +31,7 @@ public class Tree {
     // Methods
 
     /**
-     * Recursive Tree traversal method using the In-order traversal sequence
+     * Recursive Tree traversal method using the In-order traversal algorithm
      * @param node BiNode to begin traversing
      */
     private void inorderTraversal(BiNode node) {
@@ -41,16 +41,15 @@ public class Tree {
     }
 
     /**
-     * Recursive Tree traversal method using the In-order traversal sequence
+     * Recursive Tree traversal method using the In-order traversal algorithm
      */
     public void inorderTraversal() {
         System.out.print("\n");
         inorderTraversal(rootNode);
     }
 
-
     /**
-     * Recursive Tree traversal method using the Post-order traversal sequence
+     * Recursive Tree traversal method using the Post-order traversal algorithm
      * @param node BiNode to begin traversing
      */
     private void postorderTraversal(BiNode node) {
@@ -60,7 +59,7 @@ public class Tree {
     }
 
     /**
-     * Recursive Tree traversal method using the Post-order traversal sequence
+     * Recursive Tree traversal method using the Post-order traversal algorithm
      */
     public void postorderTraversal() {
         System.out.print("\n");
@@ -94,6 +93,29 @@ public class Tree {
         return stack.pop();
     }
 
+    private String infixGenerator(BiNode node) {
+        StringBuilder stringBuilder = new StringBuilder();
+        if (node.leftChild != null && node.rightChild != null) {
+            stringBuilder.append("(");
+        }
+        if (node.leftChild != null) {
+            stringBuilder.append(infixGenerator(node.leftChild));
+        }
+        stringBuilder.append(node.string);
+        if (node.rightChild!= null) {
+            stringBuilder.append(infixGenerator(node.rightChild));
+        }
+        if (node.leftChild != null && node.rightChild != null) {
+            stringBuilder.append(")");
+        }
+        return stringBuilder.toString();
+    }
+
+    public String infixGenerator() {
+        System.out.print("\n");
+        return infixGenerator(rootNode);
+    }
+
     /**
      * Main test method
      * @param args String array of arguments
@@ -117,5 +139,8 @@ public class Tree {
 
         // In-order tree traversal Test
         tree.inorderTraversal();
+
+        // Infix generation Test
+        System.out.println(tree.infixGenerator());
     }
 }
