@@ -21,8 +21,8 @@ public class Tree {
     }
 
     /**
-     *
-     * @param postfix
+     * Tree constructor method
+     * @param postfix Postfix expression String to construct as Treee
      */
     public Tree(String postfix) {
         rootNode = this.construct(postfix);
@@ -49,7 +49,7 @@ public class Tree {
 
     /**
      * Postfix conversion method which builds a binary tree structure
-     * @param postfix
+     * @param postfix Postfix expression String to convert
      * @return Binode which represents the root of the tree structure
      */
     private BiNode construct(String postfix) {
@@ -93,5 +93,6 @@ public class Tree {
         // Tree construction Test
         String postfix = "5 4 3 + *";
         Tree treeConstruct = new Tree(postfix);
+        treeConstruct.postorderTraversal();
     }
 }
