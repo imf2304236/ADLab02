@@ -27,7 +27,7 @@ public class Tree {
     }
 
     /**
-     *
+     * Recursive Tree traversal method using the Post-order traversal sequence
      */
     private void postorderTraversal() {
 

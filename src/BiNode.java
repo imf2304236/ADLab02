@@ -4,9 +4,9 @@
  */
 public class BiNode {
     // Field Declarations
-    private String string;
-    private BiNode leftChild;
-    private BiNode rightChild;
+    public String string;
+    public BiNode leftChild;
+    public BiNode rightChild;
 
     // Constructor Methods
     public BiNode(String stringInput) {
