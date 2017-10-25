@@ -13,9 +13,11 @@ public class Tree {
 
     public static void main(String[] args) {
         // Testing Tree creation
-        BiNode leftNode = new BiNode("left");
-        BiNode rightNode = new BiNode("right");
-        BiNode rootNode = new BiNode("root", leftNode, rightNode);
-        Tree testTree = new Tree(rootNode);
+        BiNode three = new BiNode("3");
+        BiNode four = new BiNode("4");
+        BiNode five = new BiNode("5");
+        BiNode plus = new BiNode("+", four, three);
+        BiNode root = new BiNode("*", five, plus);
+        Tree tree = new Tree(root);
     }
 }
