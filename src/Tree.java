@@ -43,7 +43,7 @@ public class Tree {
     /**
      * Recursive Tree traversal method using the In-order traversal sequence
      */
-    private void inorderTraversal() {
+    public void inorderTraversal() {
         System.out.print("\n");
         inorderTraversal(rootNode);
     }
@@ -62,7 +62,7 @@ public class Tree {
     /**
      * Recursive Tree traversal method using the Post-order traversal sequence
      */
-    private void postorderTraversal() {
+    public void postorderTraversal() {
         System.out.print("\n");
         postorderTraversal(rootNode);
     }
