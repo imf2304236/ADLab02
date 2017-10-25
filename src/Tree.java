@@ -31,19 +31,39 @@ public class Tree {
     // Methods
 
     /**
+     * Recursive Tree traversal method using the In-order traversal sequence
+     * @param node BiNode to begin traversing
+     */
+    private void inorderTraversal(BiNode node) {
+        if (node.leftChild != null) { inorderTraversal(node.leftChild); }
+        System.out.print(node.string + " ");
+        if (node.rightChild != null) { inorderTraversal(node.rightChild); }
+    }
+
+    /**
+     * Recursive Tree traversal method using the In-order traversal sequence
+     */
+    private void inorderTraversal() {
+        System.out.print("\n");
+        inorderTraversal(rootNode);
+    }
+
+
+    /**
      * Recursive Tree traversal method using the Post-order traversal sequence
      * @param node BiNode to begin traversing
      */
     private void postorderTraversal(BiNode node) {
         if (node.leftChild != null) { postorderTraversal(node.leftChild); }
         if (node.rightChild != null) { postorderTraversal(node.rightChild); }
-        System.out.println(node.string);
+        System.out.print(node.string + " ");
     }
 
     /**
      * Recursive Tree traversal method using the Post-order traversal sequence
      */
     private void postorderTraversal() {
+        System.out.print("\n");
         postorderTraversal(rootNode);
     }
 
@@ -94,5 +114,8 @@ public class Tree {
         String postfix = "5 4 3 + *";
         Tree treeConstruct = new Tree(postfix);
         treeConstruct.postorderTraversal();
+
+        // In-order tree traversal Test
+        tree.inorderTraversal();
     }
 }
