@@ -10,8 +10,7 @@ public class Tree {
     // Field Declarations
     private BiNode rootNode;
 
-    // Constructor
-
+    // Constructors
     /**
      * Tree constructor method
      * @param root BiNode to be assigned as the root node of the Tree
@@ -29,7 +28,6 @@ public class Tree {
     }
 
     // Methods
-
     /**
      * Recursive Tree traversal method using the In-order traversal algorithm
      * @param node BiNode to begin traversing
@@ -93,6 +91,11 @@ public class Tree {
         return stack.pop();
     }
 
+    /**
+     * Recursive method which builds a fully-parenthesized Infix expression from a tree
+     * @param node BiNode representing root node of tree or subtree
+     * @return String representing the subtree with node as its root
+     */
     private String infixGenerator(BiNode node) {
         StringBuilder stringBuilder = new StringBuilder();
         if (node.leftChild != null && node.rightChild != null) {
@@ -111,6 +114,10 @@ public class Tree {
         return stringBuilder.toString();
     }
 
+    /**
+     * Recursive method which builds a fully-parenthesized Infix expression from a tree
+     * @return String representing Infix expression
+     */
     public String infixGenerator() {
         System.out.print("\n");
         return infixGenerator(rootNode);
@@ -136,6 +143,8 @@ public class Tree {
         String postfix = "5 4 3 + *";
         Tree treeConstruct = new Tree(postfix);
         treeConstruct.postorderTraversal();
+        postfix = "5.1 9 8.88 - 4 6 + * 7 % /";
+        new Tree(postfix).postorderTraversal();
 
         // In-order tree traversal Test
         tree.inorderTraversal();
