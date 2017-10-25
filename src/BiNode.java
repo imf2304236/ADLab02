@@ -10,9 +10,7 @@ public class BiNode {
 
     // Constructor Methods
     public BiNode(String stringInput) {
-        string = stringInput;
-        leftChild = null;
-        rightChild = null;
+        this(stringInput, null, null);
     }
 
     public BiNode(String stringInput, BiNode leftInput, BiNode rightInput) {
